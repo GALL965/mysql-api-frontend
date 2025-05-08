@@ -16,7 +16,7 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USER }}" --password-stdin
 
       - name: Construir imagen
-        run: docker build -t ${{ secrets.DOCKER_USER }}/artworks-pg-frontend .
+        run: docker build -t ${{ secrets.DOCKER_USER }}/artworks-mysql-frontend .
 
       - name: Subir imagen
-        run: docker push ${{ secrets.DOCKER_USER }}/artworks-pg-frontend
+        run: docker push ${{ secrets.DOCKER_USER }}/artworks-mysql-frontend
